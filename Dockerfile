@@ -12,7 +12,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # ADD ./nginx.conf.template /etc/nginx.conf.template
-COPY nginx.conf /etc/nginx/conf.d/custom.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Copy start script and make it executable
 ADD start.sh /
