@@ -4,7 +4,7 @@ This image runs [y-websocket](https://github.com/yjs/y-websocket) behind an Ngin
 
 ## Building and Running
 
-To build and run the image locally, you can use the following commands.
+You can use the following commands to build and run the image locally.
 
 - `docker image build -t yjs-websocket-nginx .`
 - `docker run -p 80:80 yjs-websocket-nginx:latest`
