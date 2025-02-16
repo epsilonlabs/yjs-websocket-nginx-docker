@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM nginx:stable
 
 # Needed to avoid prompts blocking the build process
 ENV DEBIAN_FRONTEND=noninteractive
