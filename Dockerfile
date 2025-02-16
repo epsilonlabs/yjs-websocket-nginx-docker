@@ -11,6 +11,8 @@ RUN apt-get update \
     && apt-get install -y nodejs npm tini netcat-traditional \
     && rm -rf /var/lib/apt/lists/*
 
+RUN npm install -g y-websocket@2.1.0
+
 # ADD ./nginx.conf.template /etc/nginx.conf.template
 COPY nginx.conf /etc/nginx/nginx.conf
 
