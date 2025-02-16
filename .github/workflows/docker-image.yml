@@ -31,11 +31,11 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/epsilonlabs/yjs-websocket-nginx:latest
+        tags: ghcr.io/kolovos/yjs-websocket-nginx:latest
 
     - name: Build and push Docker image with version tag
       uses: docker/build-push-action@v3
       with:
         context: .
         push: true
-        tags: ghcr.io/epsilonlabs/yjs-websocket-nginx:${{ env.COMMIT_SHA }}
+        tags: ghcr.io/kolovos/yjs-websocket-nginx:${{ env.COMMIT_SHA }}
