@@ -20,4 +20,9 @@ COPY nginx.conf /etc/nginx/nginx.conf
 ADD start.sh /
 RUN chmod +x /start.sh
 
+WORKDIR /health
+# Copy health.js script
+ADD health.js /health
+RUN npm install express
+
 ENTRYPOINT ["/usr/bin/tini", "--", "/start.sh"]

@@ -1,11 +1,14 @@
 #!/bin/bash
 
 set -e
+
+# Start y-websocket
 HOST=0.0.0.0 PORT=1234 npx y-websocket &
 
+# Start the health monitoring service
+node health.js &
+
 # nginx as frontend + reverse proxy
-# envsubst < /etc/nginx.conf.template > /etc/nginx/conf.d/default.conf
-# cat /etc/nginx/conf.d/default.conf
 nginx -g "daemon off;" &
 
 # wait for them all
